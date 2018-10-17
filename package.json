@@ -1,11 +1,17 @@
 {
-  "name": "mern-stack",
+  "name": "mern-stack-heroku",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon server/index.js"
+    "watch-server": "nodemon server/index.js",
+    "postinstall": "browserify client/app.js -vd -t babelify -o server/public/main.js",
+    "heroku-postbuild": "node database/setup.js",
+    "start": "node server/index.js"
   },
   "keywords": [],
   "author": "",
