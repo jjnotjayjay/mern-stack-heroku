@@ -2,9 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './index.js'
 
-const $root = document.getElementById('root')
-
 ReactDOM.render(
   <App />,
-  $root
+  document.querySelector('#root')
 )
