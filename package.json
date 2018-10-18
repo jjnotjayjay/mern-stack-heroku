@@ -11,7 +11,8 @@
     "watch-server": "nodemon server/index.js",
     "postinstall": "browserify client/app.js -vd -t babelify -o server/public/main.js",
     "heroku-postbuild": "node database/setup.js",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "watch": "watchify client/app.js -vd -t babelify -o server/public/main.js"
   },
   "keywords": [],
   "author": "",
